@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC - Landing Page</title>
+    <link rel="stylesheet" href="estilos_generales.css">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header>
+        <h1>KFC</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Inicio</a></li>
+                <li><a href="#mision-vision">Misión y Visión</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="presentacion">
+        <h2>Bienvenidos a KFC</h2>
+        <p>Disfruta del inconfundible sabor de nuestro pollo frito, hecho con la receta original de 11 hierbas y especias.</p>
+    </section>
+
+    <section id="mision-vision">
+        <article>
+            <h2>Nuestra Misión</h2>
+            <p>Ofrecer comida rápida de calidad, con un sabor único y un servicio excepcional, que cree momentos de felicidad para nuestros clientes.</p>
+        </article>
+        <article>
+            <h2>Nuestra Visión</h2>
+            <p>Ser la cadena de restaurantes líder en pollo frito a nivel mundial, reconocida por su calidad, innovación y compromiso con las comunidades.</p>
+        </article>
+    </section>
+
+    <aside id="contacto">
+        <h2>Contáctanos</h2>
+        <form id="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="2">
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 KFC. Todos los derechos reservados.</p>
+        <p>Síguenos en:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="validaciones.js"></script>
+</body>
+</html>
