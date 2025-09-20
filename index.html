@@ -6,60 +6,122 @@
     <title>KFC - Landing Page</title>
     <link rel="stylesheet" href="estilos_generales.css">
     <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>KFC</h1>
+
+<header>
+    <div class="header-content">
+        <div class="logo">KFC</div>
         <nav>
             <ul>
                 <li><a href="#presentacion">Inicio</a></li>
-                <li><a href="#mision-vision">Misión y Visión</a></li>
+                <li><a href="#mision-vision">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <section id="presentacion">
-        <h2>Bienvenidos a KFC</h2>
-        <p>Disfruta del inconfundible sabor de nuestro pollo frito, hecho con la receta original de 11 hierbas y especias.</p>
-    </section>
+<div class="toast-notification" id="success-message">
+    <div class="toast-icon">✓</div>
+    <div class="toast-content">
+        <p>¡Mensaje enviado correctamente!<br>Nos pondremos en contacto contigo pronto.</p>
+    </div>
+</div>
 
-    <section id="mision-vision">
-        <article>
-            <h2>Nuestra Misión</h2>
-            <p>Ofrecer comida rápida de calidad, con un sabor único y un servicio excepcional, que cree momentos de felicidad para nuestros clientes.</p>
-        </article>
-        <article>
-            <h2>Nuestra Visión</h2>
-            <p>Ser la cadena de restaurantes líder en pollo frito a nivel mundial, reconocida por su calidad, innovación y compromiso con las comunidades.</p>
-        </article>
-    </section>
+<section id="presentacion">
+    <div class="hero-content">
+        <h2>¡El Sabor Original!</h2>
+        <p>Disfruta del inconfundible sabor de nuestro pollo frito, hecho con la receta secreta de 11 hierbas y especias
+            del Coronel Sanders.</p>
+        <a href="#contacto" class="cta-button">¡Contáctanos Ahora!</a>
+    </div>
+</section>
 
-    <aside id="contacto">
-        <h2>Contáctanos</h2>
-        <form id="form-contacto">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required minlength="2">
+<section id="mision-vision">
+    <div class="container">
+        <div class="hero-content">
+            <h2 style="color: #dc143c; font-size: 3rem; margin-bottom: 1rem;">Conoce KFC</h2>
+            <p style="color: #666; font-size: 1.2rem;">Más de 70 años llevando el mejor sabor a familias de todo el
+                mundo</p>
+        </div>
+        <div class="mission-vision-grid">
+            <article class="card">
+                <h2>Nuestra Misión</h2>
+                <p>Ofrecer comida rápida de calidad excepcional, con un sabor único e inigualable, brindando un servicio
+                    extraordinario que cree momentos de felicidad y satisfacción para nuestros clientes en cada
+                    visita.</p>
+            </article>
+            <article class="card">
+                <h2>Nuestra Visión</h2>
+                <p>Ser la cadena de restaurantes líder mundial en pollo frito, reconocida por nuestra calidad superior,
+                    innovación constante y compromiso genuino con las comunidades que servimos.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
+<section id="contacto">
+    <div class="contact-content">
+        <h2>¡Hablemos!</h2>
+        <p class="contact-intro">¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte y brindarte la mejor
+            atención.</p>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+        <div class="form-container">
+            <form id="form-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                    <div class="error-message">El nombre debe tener al menos 2 caracteres</div>
+                </div>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </aside>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    <div class="error-message">Ingresa un correo electrónico válido</div>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 KFC. Todos los derechos reservados.</p>
-        <p>Síguenos en:
-            <a href="#">Facebook</a> |
-            <a href="#">Instagram</a> |
-            <a href="#">Twitter</a>
-        </p>
-    </footer>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+593 99 123 4567">
+                    <div class="error-message">Ingresa un número de teléfono válido</div>
+                </div>
 
-    <script src="validaciones.js"></script>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..."
+                              required></textarea>
+                    <div class="error-message">El mensaje debe tener al menos 10 caracteres</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <p class="footer-copy">&copy; 2025 KFC Ecuador. Todos los derechos reservados.</p>
+        <div class="footer-social">
+            <span>Síguenos en:</span>
+            <a href="https://www.facebook.com/kfc" target="_blank" aria-label="Facebook" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kfc/" target="_blank" aria-label="Instagram" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/kfc" target="_blank" aria-label="Twitter" class="twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.tiktok.com/@kfc" target="_blank" aria-label="TikTok" class="tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="validaciones.js"></script>
 </body>
 </html>
